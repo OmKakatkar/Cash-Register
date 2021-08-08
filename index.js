@@ -2,7 +2,7 @@ const billAmount = document.querySelector("#bill-amount");
 const custAmount = document.querySelector("#cust-amount");
 const calc = document.querySelector("#calc");
 const notesQty = document.querySelectorAll(".quantity");
-console.log(`${calc} here`);
+console.log(`${billAmount.value} - ${custAmount.value} here`);
 const noteArray = [2000, 500, 100, 20, 10, 5, 1];
 
 calc.addEventListener("click", () =>
@@ -11,15 +11,22 @@ calc.addEventListener("click", () =>
 
 function getNotes(actual, given) {
   clearData();
+  if (actual !== "" && given !== "") {
+    let retAmt = given - actual;
 
-  let retAmt = given - actual;
-
-  if (retAmt < 1) {
-    alert("Bill is settled");
+    if (retAmt === 0) {
+      alert("Bill is settled");
+      return;
+    } else if (retAmt < 0) {
+      alert("Not enough money");
+      return;
+    }
+    for (let i = 0; i < noteArray.length; i++) {
+      retAmt = getNoteQty(retAmt, noteArray[i], i);
+    }
+  } else {
+    alert("Please enter all details");
     return;
-  }
-  for (let i = 0; i < noteArray.length; i++) {
-    retAmt = getNoteQty(retAmt, noteArray[i], i);
   }
 }
 
