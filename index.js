@@ -15,8 +15,12 @@ calc.addEventListener("click", () =>
 );
 
 nextBtn.addEventListener("click", function () {
-  nextBtn.style.display = "none";
-  returnBackTable.style.display = "block";
+  if (billAmount.value !== "") {
+    nextBtn.style.display = "none";
+    returnBackTable.style.display = "block";
+  } else {
+    alert("Please enter the amount");
+  }
 });
 
 function getNotes(actual, given) {
