@@ -20,34 +20,38 @@
       <main>
         <div class="label">Bill Amount:</div>
         <input type="number" name="bill-amount" id="bill-amount" />
-        <div class="label">Cash Given:</div>
-        <input type="number" name="cust-amount" id="cust-amount" />
+        <button id="next-input">Next</button>
         <div class="return-back">
-          <button id="calc">calculate</button>
-          <table>
-            <tbody>
-              <tr>
-                <th>No. of notes</th>
-                <td class="quantity"></td>
-                <td class="quantity"></td>
-                <td class="quantity"></td>
-                <td class="quantity"></td>
-                <td class="quantity"></td>
-                <td class="quantity"></td>
-                <td class="quantity"></td>
-              </tr>
-              <tr>
-                <th>Note</th>
-                <td>2000</td>
-                <td>500</td>
-                <td>100</td>
-                <td>20</td>
-                <td>10</td>
-                <td>5</td>
-                <td>1</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="label">Cash Given:</div>
+          <input type="number" name="cust-amount" id="cust-amount" />
+          <button id="calc">Calculate</button>
+          <div class="output-container">
+            <div id="output"></div>
+            <table>
+              <tbody>
+                <tr>
+                  <th>No. of notes</th>
+                  <td class="quantity"></td>
+                  <td class="quantity"></td>
+                  <td class="quantity"></td>
+                  <td class="quantity"></td>
+                  <td class="quantity"></td>
+                  <td class="quantity"></td>
+                  <td class="quantity"></td>
+                </tr>
+                <tr>
+                  <th>Note</th>
+                  <td>2000</td>
+                  <td>500</td>
+                  <td>100</td>
+                  <td>20</td>
+                  <td>10</td>
+                  <td>5</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </main>
     </div>

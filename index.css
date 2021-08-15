@@ -44,6 +44,8 @@ input[type="number"] {
 button {
   font-size: 1rem;
   padding: 0.5em 1em;
+  display: block;
+  margin: 1rem auto;
 }
 
 table {
@@ -58,8 +60,17 @@ table {
 
 th,
 td {
-    border: 2px solid violet;
-    font-size: 1.3rem;
-    word-wrap: break-word;
-    padding: 0.2rem;
+  border: 2px solid violet;
+  font-size: 1.3rem;
+  word-wrap: break-word;
+  padding: 0.2rem;
+}
+
+#output {
+  font-size: 2rem;
+}
+
+.return-back,
+.output-container {
+  display: none;
 }
